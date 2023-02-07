@@ -10,8 +10,21 @@ export const FormContainer = styled.form`
     background: ${props => props.theme.colors.box};
     border-radius: 16px;
 
+    svg {
+        margin-left: 0.75rem;
+    }
+
     input {
         flex: 1;
+        border: none;
+        border-radius: 8px;
+        padding: 0.5rem;
+
+        background: transparent;
+        
+        ::placeholder {
+            color: ${props => props.theme.colors.text}
+        }
     }
 
     button {
@@ -21,5 +34,10 @@ export const FormContainer = styled.form`
         border-radius: 8px;
 
         background: ${props => props.theme.colors.button};
+        transition: 0.2s background;
+
+        &:hover {
+            background: ${props => props.theme.colors.buttonHover};
+        }
     }
 `

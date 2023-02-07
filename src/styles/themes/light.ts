@@ -4,6 +4,7 @@ export const lightTheme = {
         box: '#FEFEFE',
         innerBox: '#F5F8FF',
         button: '#0078FD',
+        buttonHover: '#1E4774',
         text: '#C1C7D3',
         textNotAvailable: '#A5B3C9',
         user: '#8CC0E7',

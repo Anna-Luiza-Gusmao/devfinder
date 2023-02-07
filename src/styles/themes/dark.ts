@@ -4,6 +4,7 @@ export const darkTheme = {
         box: '#1F2A48',
         innerBox: '#141C2F',
         button: '#0079FE',
+        buttonHover: '#1E4774',
         text: '#FFFFFF',
         textNotAvailable: '#8E94A4',
         user: '#164387',
