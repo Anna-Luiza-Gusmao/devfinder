@@ -1,7 +1,12 @@
 import { MagnifyingGlass } from "phosphor-react";
+import { FormContainer } from "./styles";
 
 export function SearchForm() {
     return (
-        <MagnifyingGlass size={32} />
+        <FormContainer>
+            <MagnifyingGlass size={24} color="#0079FE"/>
+            <input />
+            <button>Buscar</button>
+        </FormContainer>
     )
 }
