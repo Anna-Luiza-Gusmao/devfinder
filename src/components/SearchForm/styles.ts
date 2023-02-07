@@ -33,6 +33,7 @@ export const FormContainer = styled.form`
         padding: 0.75rem 1rem;
         border-radius: 8px;
 
+        color: ${props => props.theme.colors.textButton};
         background: ${props => props.theme.colors.button};
         transition: 0.2s background;
 

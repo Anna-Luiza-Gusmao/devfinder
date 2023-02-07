@@ -1,17 +1,47 @@
-import { Sun } from "phosphor-react"
+import { Moon, Sun } from "phosphor-react"
+import { useState } from "react"
 import { HeaderContainer, ThemeContainer } from "./styles"
 
-export function Header() {
-    return (
-        <HeaderContainer>
-            <h1>devfinder</h1>
+import { darkTheme } from '../../styles/themes/dark'
+import { lightTheme } from "../../styles/themes/light"
 
-            <ThemeContainer>
-                <p>LIGHT</p>
-                <button>
-                    <Sun size={32} />
-                </button>
-            </ThemeContainer>
-        </HeaderContainer>
-    )
+export function Header() {
+    const [chosenTheme, setChosenTheme] = useState(darkTheme)
+
+    function handleTheme () {
+        if(chosenTheme === darkTheme){
+            setChosenTheme(lightTheme)
+        }else{
+            setChosenTheme(darkTheme)
+        }
+    }
+
+    return {
+        chosenTheme,
+        renderHeader: (
+            <HeaderContainer>
+                <h1>devfinder</h1>
+    
+                <ThemeContainer>
+                    {
+                        (chosenTheme.name === 'dark') ? <p>LIGHT</p> : <p>DARK</p>
+                    }
+                    
+                        {
+                            (chosenTheme.name === 'dark') ? (
+                                <button onClick={handleTheme}>
+                                    <Sun size={32} /> 
+                                </button>
+                            )
+                            : (
+                                <button onClick={handleTheme}>
+                                    <Moon size={32} color='#878787'/>
+                                </button>
+                            )
+                        }
+                    
+                </ThemeContainer>
+            </HeaderContainer>
+        )
+    }
 }
