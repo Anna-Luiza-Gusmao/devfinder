@@ -12,6 +12,10 @@ export const FormContainer = styled.form`
 
     svg {
         margin-left: 0.75rem;
+
+        @media (max-width: 480px) {
+            display: none;
+        }
     }
 
     input {
