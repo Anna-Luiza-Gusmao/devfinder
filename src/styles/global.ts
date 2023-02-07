@@ -15,6 +15,12 @@ export const GlobalStyle = createGlobalStyle`
     body {
         background-color: ${(props) => props.theme.colors.background};
         -webkit-font-smoothing: antialiased;
+        
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
     
     body, input, textarea, button {
