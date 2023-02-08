@@ -15,6 +15,20 @@ export const UsersContainer = styled.div`
         width: 7.5rem;
         height: 7.5rem;
     }
+
+    @media (min-width: 768px) and (max-width: 1024px){
+        gap: 1.5rem;
+        padding: 1.5rem;
+
+        img {
+            width: 7rem;
+            height: 7rem;
+        }
+    }
+    @media (max-width: 767px){
+        flex-direction: column;
+        padding: 1.5rem;
+    }
 `
 
 export const UsersData = styled.section`
@@ -26,6 +40,13 @@ export const UsersData = styled.section`
         display: flex;
         align-items: center;
         justify-content: space-between;
+    }
+
+    @media (max-width: 480px) {
+        div {
+            flex-direction: column;
+            align-items: flex-start;
+        }
     }
 `
 
@@ -55,7 +76,22 @@ export const ProfileNumbersContainer = styled.section`
     }
 
     strong {
-            font-size: 1.5rem;
+        font-size: 1.5rem;
+    }
+
+    @media (min-width: 768px) and (max-width: 1024px){
+        padding: 1rem;
+    }
+    @media (min-width: 481px) and (max-width: 767px){
+        padding: 1rem;
+    }
+    @media (max-width: 480px) {
+        font-size: 0.75rem;
+        padding: 1rem;
+
+        strong {
+            font-size: 1rem;
+        }
     }
 `
 
@@ -69,5 +105,9 @@ export const IconsContainer = styled.section`
         display: flex;
         align-items: center;
         gap: 1rem;
+    }
+
+    @media (max-width: 767px){
+        grid-template-columns: 1fr;
     }
 `
