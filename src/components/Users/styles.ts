@@ -107,6 +107,10 @@ export const IconsContainer = styled.section`
         gap: 1rem;
     }
 
+    span {
+        color: ${props => props.theme.colors.textNotAvailable};
+    }
+
     @media (max-width: 767px){
         grid-template-columns: 1fr;
     }

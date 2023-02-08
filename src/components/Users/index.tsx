@@ -1,5 +1,13 @@
 import { DataUser } from "../SearchForm"
-import { IconsContainer, NoUserContainer, ProfileNumbersContainer, User, UserBio, UsersContainer, UsersData } from "./styles"
+import { 
+    IconsContainer, 
+    NoUserContainer, 
+    ProfileNumbersContainer, 
+    User, 
+    UserBio, 
+    UsersContainer, 
+    UsersData 
+} from "./styles"
 import { Buildings, Link, MagnifyingGlass, MapPin, TwitterLogo } from "phosphor-react"
 
 interface Users {
@@ -45,20 +53,32 @@ export function Users({ usersData }: Users) {
 
                                 <IconsContainer>
                                     <section>
-                                        <MapPin size={24} />
-                                        <span>{user.location}</span>
+                                        <MapPin size={24} /> 
+                                        {
+                                            (user.location === null) ? <span>Not Available</span> 
+                                                : <p>{user.location}</p>
+                                        }
                                     </section>
                                     <section>
                                         <TwitterLogo size={24} />
-                                        <span>{user.twitter_username}</span>
+                                        {
+                                            (user.twitter_username === null) ? <span>Not Available</span> 
+                                                : <p>{user.twitter_username}</p>
+                                        }
                                     </section>
                                     <section>
                                         <Link size={24} />
-                                        <span>{user.blog}</span>
+                                        {
+                                            (user.blog === null) ? <span>Not Available</span> 
+                                                : <p>{user.blog}</p>
+                                        }
                                     </section>
                                     <section>
                                         <Buildings size={32} />
-                                        <span>{user.company}</span>
+                                        {
+                                            (user.company === null) ? <span>Not Available</span> 
+                                                : <p>{user.company}</p>
+                                        }
                                     </section>
                                 </IconsContainer>
                             </UsersData>
