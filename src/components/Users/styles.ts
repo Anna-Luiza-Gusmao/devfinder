@@ -53,6 +53,10 @@ export const ProfileNumbersContainer = styled.section`
         flex-direction: column;
         align-items: flex-start;
     }
+
+    strong {
+            font-size: 1.5rem;
+    }
 `
 
 export const IconsContainer = styled.section`

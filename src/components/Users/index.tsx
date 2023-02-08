@@ -17,15 +17,15 @@ export function Users() {
                 <ProfileNumbersContainer>
                     <div>
                         <p>Repositórios</p>
-                        <p>8</p>
+                        <strong>8</strong>
                     </div>
                     <div>
                         <p>Seguidores</p>
-                        <p>8</p>
+                        <strong>8</strong>
                     </div>
                     <div>
                         <p>Seguindo</p>
-                        <p>8</p>
+                        <strong>8</strong>
                     </div>
                 </ProfileNumbersContainer>
 
