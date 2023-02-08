@@ -7,8 +7,8 @@ export const lightTheme = {
         button: '#0078FD',
         buttonHover: '#819FC1',
         textButton: '#FFFFFF',
-        text: '#878787',
-        textNotAvailable: '#A5B3C9',
+        text: '#343434',
+        textNotAvailable: '#6D7074',
         user: '#8CC0E7',
         title: '#9EA0A4'
     }

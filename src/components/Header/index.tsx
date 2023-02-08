@@ -35,7 +35,7 @@ export function Header() {
                             )
                             : (
                                 <button onClick={handleTheme}>
-                                    <Moon size={32} color='#878787'/>
+                                    <Moon size={32} color='#343434'/>
                                 </button>
                             )
                         }

@@ -8,7 +8,7 @@ export const darkTheme = {
         buttonHover: '#1E4774',
         textButton: '#FFFFFF',
         text: '#FFFFFF',
-        textNotAvailable: '#8E94A4',
+        textNotAvailable: '#A5ADC1',
         user: '#164387',
         title: '#FAFAFA'
     }
