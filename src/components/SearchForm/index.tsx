@@ -45,7 +45,6 @@ export function SearchForm() {
             setUsersData([response.data])
         }catch (err) {
             if (err instanceof AxiosError) {
-                alert('tem erro')
                 setUsersData([])
                 return
             }
