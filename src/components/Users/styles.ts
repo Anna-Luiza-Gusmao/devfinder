@@ -9,6 +9,7 @@ export const UsersContainer = styled.div`
     padding: 2rem;
     background: ${props => props.theme.colors.box};
     border-radius: 16px;
+    box-shadow: -1px 4px 26px -6px ${props => props.theme.colors.boxShadow};
 
     img {
         border-radius: 50%;

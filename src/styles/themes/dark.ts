@@ -3,6 +3,7 @@ export const darkTheme = {
     colors: {
         background: '#141C2F',
         box: '#1F2A48',
+        boxShadow: '#1F2A48',
         innerBox: '#141C2F',
         button: '#0079FE',
         buttonHover: '#1E4774',

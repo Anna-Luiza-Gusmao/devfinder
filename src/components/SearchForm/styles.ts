@@ -9,6 +9,7 @@ export const FormContainer = styled.form`
     padding: 0.5rem;
     background: ${props => props.theme.colors.box};
     border-radius: 16px;
+    box-shadow: -1px 4px 26px -6px ${props => props.theme.colors.boxShadow};
 
     svg {
         margin-left: 0.75rem;

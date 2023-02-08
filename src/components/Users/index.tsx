@@ -1,12 +1,12 @@
 import { DataUser } from "../SearchForm"
 import { NoUsers } from "./components/NoUsers"
-import { 
-    IconsContainer, 
-    ProfileNumbersContainer, 
-    User, 
-    UserBio, 
-    UsersContainer, 
-    UsersData 
+import {
+    IconsContainer,
+    ProfileNumbersContainer,
+    User,
+    UserBio,
+    UsersContainer,
+    UsersData
 } from "./styles"
 import { Buildings, Link, MapPin, TwitterLogo } from "phosphor-react"
 import { format } from 'date-fns'
@@ -62,30 +62,30 @@ export function Users({ usersData }: Users) {
 
                                 <IconsContainer>
                                     <section>
-                                        <MapPin size={24} /> 
+                                        <MapPin size={24} />
                                         {
-                                            (user.location === null) ? <span>Not Available</span> 
+                                            (user.location === null) ? <span>Not Available</span>
                                                 : <p>{user.location}</p>
                                         }
                                     </section>
                                     <section>
                                         <TwitterLogo size={24} />
                                         {
-                                            (user.twitter_username === null) ? <span>Not Available</span> 
+                                            (user.twitter_username === null) ? <span>Not Available</span>
                                                 : <p>{user.twitter_username}</p>
                                         }
                                     </section>
                                     <section>
                                         <Link size={24} />
                                         {
-                                            (user.blog === null) ? <span>Not Available</span> 
+                                            (user.blog === null) ? <span>Not Available</span>
                                                 : <p>{user.blog}</p>
                                         }
                                     </section>
                                     <section>
                                         <Buildings size={32} />
                                         {
-                                            (user.company === null) ? <span>Not Available</span> 
+                                            (user.company === null) ? <span>Not Available</span>
                                                 : <p>{user.company}</p>
                                         }
                                     </section>

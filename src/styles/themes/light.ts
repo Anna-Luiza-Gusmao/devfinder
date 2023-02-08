@@ -3,6 +3,7 @@ export const lightTheme = {
     colors: {
         background: '#F2F8FF',
         box: '#FEFEFE',
+        boxShadow: '#D7D7D7',
         innerBox: '#F5F8FF',
         button: '#0078FD',
         buttonHover: '#819FC1',
