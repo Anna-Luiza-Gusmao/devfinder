@@ -9,12 +9,20 @@ import {
     UsersData 
 } from "./styles"
 import { Buildings, Link, MapPin, TwitterLogo } from "phosphor-react"
+import { format } from 'date-fns'
+import ptBR from 'date-fns/locale/pt-BR'
 
 interface Users {
     usersData: DataUser[]
 }
 
 export function Users({ usersData }: Users) {
+    let day = 1
+    let month = 1
+    let year = 2001
+
+    let formattedDate = []
+
     return (
         <>
             {
@@ -22,12 +30,17 @@ export function Users({ usersData }: Users) {
                     <NoUsers />
                 ) : (
                     usersData.map((user) => (
+                        formattedDate = user.created_at.split(""),
+                        year = parseInt(formattedDate[0] + formattedDate[1] + formattedDate[2] + formattedDate[3]),
+                        month = parseInt(formattedDate[5] + formattedDate[6]),
+                        day = parseInt(formattedDate[8] + formattedDate[9]),
+
                         <UsersContainer key={user.id}>
                             <img src={user.avatar_url} />
                             <UsersData>
                                 <div>
                                     <h2>{user.name}</h2>
-                                    <p>Entrou em {user.created_at}</p>
+                                    <p>Entrou em {format(new Date(year, month - 1, day), 'dd MMM yyyy', { locale: ptBR })}</p>
                                 </div>
                                 <User>@{user.login}</User>
                                 <UserBio>{user.bio}</UserBio>

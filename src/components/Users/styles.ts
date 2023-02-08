@@ -111,6 +111,10 @@ export const IconsContainer = styled.section`
         color: ${props => props.theme.colors.textNotAvailable};
     }
 
+    p {
+        padding-right: 0.5rem;
+    }
+
     @media (max-width: 767px){
         grid-template-columns: 1fr;
     }
