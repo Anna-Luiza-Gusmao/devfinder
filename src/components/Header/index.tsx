@@ -6,7 +6,15 @@ import { darkTheme } from '../../styles/themes/dark'
 import { lightTheme } from "../../styles/themes/light"
 
 export function Header() {
-    const [chosenTheme, setChosenTheme] = useState(darkTheme)
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+    let theme = darkTheme
+    if( prefersDark ) {
+        theme = darkTheme
+    } else {
+        theme = lightTheme
+    }
+
+    const [chosenTheme, setChosenTheme] = useState(theme)
 
     function handleTheme () {
         if(chosenTheme === darkTheme){
