@@ -8,6 +8,10 @@ Para iniciar o projeto insira o comando:
 ```
 npm run dev
 ```
+ou entre no link:
+```
+https://dazzling-hummingbird-add15f.netlify.app
+```
 
 
 ## 💻 Projeto
