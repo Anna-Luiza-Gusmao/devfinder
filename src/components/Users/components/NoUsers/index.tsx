@@ -6,7 +6,7 @@ export function NoUsers() {
         <NoUserContainer>
             <MagnifyingGlass size={84} />
             <p>Ops...</p>
-            <p>Você ainda não buscou por nenhum usuário</p>
+            <p>Você ainda não buscou por nenhum usuário válido</p>
         </NoUserContainer>
     )
 }

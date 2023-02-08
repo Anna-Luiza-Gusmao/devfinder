@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form"
 import { zodResolver } from '@hookform/resolvers/zod'
 import { api } from "../../lib/axios"
 import { useState } from "react"
+import { AxiosError } from "axios"
 
 const searchFormSchema = z.object({
     query: z.string()
@@ -39,8 +40,18 @@ export function SearchForm() {
     const [usersData, setUsersData] = useState<DataUser[]>([])
 
     async function searchUser(query?: string) {
-        const response = await api.get(`users/${query}`)
-        setUsersData([response.data])
+        try{
+            const response = await api.get(`users/${query}`)
+            setUsersData([response.data])
+        }catch (err) {
+            if (err instanceof AxiosError) {
+                alert('tem erro')
+                setUsersData([])
+                return
+            }
+
+            console.error(err)
+        }
     }
 
     async function handleSearchUsers (data: SearchFormInputs) {
