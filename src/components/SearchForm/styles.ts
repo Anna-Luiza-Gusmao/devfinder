@@ -41,7 +41,12 @@ export const FormContainer = styled.form`
         background: ${props => props.theme.colors.button};
         transition: 0.2s background;
 
-        &:hover {
+        &:not(:disabled):hover {
+            background: ${props => props.theme.colors.buttonHover};
+        }
+
+        &:disabled {
+            cursor: not-allowed;
             background: ${props => props.theme.colors.buttonHover};
         }
     }

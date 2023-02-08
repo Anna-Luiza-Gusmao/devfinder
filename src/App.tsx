@@ -11,12 +11,17 @@ export function App() {
     renderHeader
   } = Header()
 
+  const {
+    usersData,
+    renderSearchForm
+  } = SearchForm()
+
   return (
     <ThemeProvider theme={chosenTheme}>
       <GeneralBox>
         {renderHeader}
-        <SearchForm />
-        <Users />
+        {renderSearchForm}
+        <Users usersData={usersData} />
       </GeneralBox>
 
       <GlobalStyle />
