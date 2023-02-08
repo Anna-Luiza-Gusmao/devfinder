@@ -1,14 +1,14 @@
 import { DataUser } from "../SearchForm"
+import { NoUsers } from "./components/NoUsers"
 import { 
     IconsContainer, 
-    NoUserContainer, 
     ProfileNumbersContainer, 
     User, 
     UserBio, 
     UsersContainer, 
     UsersData 
 } from "./styles"
-import { Buildings, Link, MagnifyingGlass, MapPin, TwitterLogo } from "phosphor-react"
+import { Buildings, Link, MapPin, TwitterLogo } from "phosphor-react"
 
 interface Users {
     usersData: DataUser[]
@@ -19,11 +19,7 @@ export function Users({ usersData }: Users) {
         <>
             {
                 (usersData.length === 0) ? (
-                    <NoUserContainer>
-                        <MagnifyingGlass size={84} />
-                        <p>Ops...</p>
-                        <p>Você ainda não buscou por nenhum usuário</p>
-                    </NoUserContainer>
+                    <NoUsers />
                 ) : (
                     usersData.map((user) => (
                         <UsersContainer key={user.id}>
